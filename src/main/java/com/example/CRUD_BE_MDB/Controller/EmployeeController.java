@@ -4,6 +4,7 @@ import com.example.CRUD_BE_MDB.Model.Employee;
 import com.example.CRUD_BE_MDB.Service.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -28,6 +29,7 @@ public class EmployeeController {
         return employee != null ? ResponseEntity.ok(employee) : ResponseEntity.notFound().build();
     }
 
+    @PreAuthorize("hasRole('USER')")
     @GetMapping
     public ResponseEntity<List<Employee>> getAllEmployees() {
         List<Employee> employees = employeeService.getAllEmployees();
