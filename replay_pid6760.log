@@ -152,8 +152,8 @@ instanceKlass org/springframework/http/ResponseEntity$BodyBuilder
 instanceKlass org/springframework/http/ResponseEntity$HeadersBuilder
 instanceKlass java/lang/invoke/ClassSpecializer$Factory$1Var
 instanceKlass sun/invoke/util/ValueConversions$1
-instanceKlass com/example/CRUD_BE_MDB/Model/Employee_Accessor_avz574
-instanceKlass com/example/CRUD_BE_MDB/Model/Employee_Instantiator_avz574
+instanceKlass com/example/CRUD_BE_MDB/Model/Student_Accessor_avz574
+instanceKlass com/example/CRUD_BE_MDB/Model/Student_Instantiator_avz574
 instanceKlass org/bson/codecs/NumberCodecHelper$1
 instanceKlass org/bson/codecs/NumberCodecHelper
 instanceKlass org/springframework/data/mongodb/core/MongoTemplate$FindOneCallback
@@ -3148,7 +3148,7 @@ instanceKlass org/springframework/data/domain/Slice
 instanceKlass org/springframework/data/domain/Example
 instanceKlass org/springframework/data/util/ReactiveWrappers$1
 instanceKlass org/springframework/data/util/ReactiveWrappers
-instanceKlass com/example/CRUD_BE_MDB/Model/Employee
+instanceKlass com/example/CRUD_BE_MDB/Model/Student
 instanceKlass org/springframework/util/ConcurrentLruCache$AddTask
 instanceKlass org/springframework/util/ConcurrentLruCache$WriteOperations
 instanceKlass org/springframework/util/ConcurrentLruCache$ReadOperations
@@ -3159,7 +3159,7 @@ instanceKlass org/springframework/data/util/TypeInformation
 instanceKlass org/springframework/data/repository/core/CrudMethods
 instanceKlass org/springframework/data/repository/core/support/AbstractRepositoryMetadata
 instanceKlass org/springframework/data/repository/core/RepositoryMetadata
-instanceKlass com/example/CRUD_BE_MDB/Repository/EmployeeRepository
+instanceKlass com/example/CRUD_BE_MDB/Repository/StudentRepository
 instanceKlass org/springframework/data/repository/config/DefaultRepositoryConfiguration
 instanceKlass org/springframework/data/repository/util/ClassUtils
 instanceKlass org/springframework/util/MethodInvoker
@@ -3927,8 +3927,8 @@ instanceKlass org/springframework/http/converter/json/ProblemDetailJacksonMixin
 instanceKlass org/springframework/http/ProblemDetail
 instanceKlass com/fasterxml/jackson/databind/deser/ValueInstantiators$Base
 instanceKlass com/fasterxml/jackson/databind/module/SimpleKeyDeserializers
-instanceKlass com/example/CRUD_BE_MDB/Service/impl/EmployeeServiceImpl
-instanceKlass com/example/CRUD_BE_MDB/Service/EmployeeService
+instanceKlass com/example/CRUD_BE_MDB/Service/impl/StudentServiceImpl
+instanceKlass com/example/CRUD_BE_MDB/Service/StudentService
 instanceKlass com/example/CRUD_BE_MDB/Security/WebSecurityConfig
 instanceKlass com/example/CRUD_BE_MDB/Security/SwaggerConfig
 instanceKlass com/example/CRUD_BE_MDB/Security/Services/UserDetailsServiceImpl
@@ -3938,7 +3938,7 @@ instanceKlass java/util/function/ToLongFunction
 instanceKlass com/example/CRUD_BE_MDB/Security/JWT/AuthEntryPointJwt
 instanceKlass org/springframework/security/web/AuthenticationEntryPoint
 instanceKlass com/example/CRUD_BE_MDB/Controller/TestController
-instanceKlass com/example/CRUD_BE_MDB/Controller/EmployeeController
+instanceKlass com/example/CRUD_BE_MDB/Controller/StudentController
 instanceKlass com/example/CRUD_BE_MDB/Controller/AuthController
 instanceKlass com/fasterxml/jackson/databind/type/ClassKey
 instanceKlass org/apache/coyote/UpgradeProtocol
