@@ -14,35 +14,35 @@ import java.util.Optional;
 public class StudentServiceImpl implements StudentService {
 
     @Autowired
-    private StudentRepository studentRepository;
+    private StudentRepository employeeRepository;
 
     @Override
-    public Student createStudent(Student student) {
-        return studentRepository.save(student);
+    public Student createStudent(Student employee) {
+        return employeeRepository.save(employee);
     }
 
     @Override
     public Student getStudentById(long id) {
-        Optional<Student> student = studentRepository.findById(id);
-        return student.orElse(null); // Return null or throw an exception if not found
+        Optional<Student> employee = employeeRepository.findById(id);
+        return employee.orElse(null); // Return null or throw an exception if not found
     }
 
     @Override
     public List<Student> getAllStudents() {
-        return studentRepository.findAll();
+        return employeeRepository.findAll();
     }
 
     @Override
-    public Student updateStudent(long id, Student student) {
-        if (studentRepository.existsById(id)) {
-            student.setId(id);
-            return studentRepository.save(student);
+    public Student updateStudent(long id, Student employee) {
+        if (employeeRepository.existsById(id)) {
+            employee.setId(id);
+            return employeeRepository.save(employee);
         }
         return null; // Return null or throw an exception if not found
     }
 
     @Override
     public void deleteStudent(long id) {
-        studentRepository.deleteById(id);
+        employeeRepository.deleteById(id);
     }
 }

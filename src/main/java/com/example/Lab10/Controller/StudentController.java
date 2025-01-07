@@ -16,36 +16,36 @@ import java.util.List;
 public class StudentController {
 
     @Autowired
-    private StudentService studentService;
+    private StudentService employeeService;
 
     @PostMapping
-    public ResponseEntity<Student> createStudent(@RequestBody Student student) {
-        Student createdStudent = studentService.createStudent(student);
+    public ResponseEntity<Student> createStudent(@RequestBody Student employee) {
+        Student createdStudent = employeeService.createStudent(employee);
         return ResponseEntity.ok(createdStudent);
     }
 
     @GetMapping("/{id}")
     public ResponseEntity<Student> getStudentById(@PathVariable long id) {
-        Student student = studentService.getStudentById(id);
-        return student != null ? ResponseEntity.ok(student) : ResponseEntity.notFound().build();
+        Student employee = employeeService.getStudentById(id);
+        return employee != null ? ResponseEntity.ok(employee) : ResponseEntity.notFound().build();
     }
 
     @PreAuthorize("hasRole('USER')")
     @GetMapping
     public ResponseEntity<List<Student>> getAllStudents() {
-        List<Student> students = studentService.getAllStudents();
-        return ResponseEntity.ok(students);
+        List<Student> employees = employeeService.getAllStudents();
+        return ResponseEntity.ok(employees);
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Student> updateStudent(@PathVariable long id, @RequestBody Student student) {
-        Student updatedStudent = studentService.updateStudent(id, student);
+    public ResponseEntity<Student> updateStudent(@PathVariable long id, @RequestBody Student employee) {
+        Student updatedStudent = employeeService.updateStudent(id, employee);
         return updatedStudent != null ? ResponseEntity.ok(updatedStudent) : ResponseEntity.notFound().build();
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteStudent(@PathVariable long id) {
-        studentService.deleteStudent(id);
+        employeeService.deleteStudent(id);
         return ResponseEntity.noContent().build();
     }
 }
